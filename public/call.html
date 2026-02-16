@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LiveCall Room</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <main class="call-layout">
+    <section class="video-panel">
+      <div id="network-status" class="notice small">Network: checking…</div>
+      <div id="video-grid" class="video-grid"></div>
+      <div class="toolbar">
+        <button id="toggle-audio">Mute</button>
+        <button id="toggle-video">Video Off</button>
+        <button id="switch-camera">Switch Camera</button>
+        <button id="share-screen">Share Screen</button>
+        <button id="stop-share">Stop Share</button>
+        <button id="toggle-blur">Virtual Background</button>
+        <button id="record">Start Recording</button>
+        <button id="leave" class="danger">Leave</button>
+      </div>
+    </section>
+
+    <aside class="side-panel">
+      <section class="card compact">
+        <h3>Participants</h3>
+        <ul id="participants"></ul>
+      </section>
+
+      <section class="card compact">
+        <h3>Chat</h3>
+        <div id="chat-box" class="chat-box"></div>
+        <form id="chat-form" class="chat-form">
+          <input type="text" id="chat-input" placeholder="Message" />
+          <input type="text" id="emoji-input" placeholder="😀" />
+          <input type="file" id="file-input" />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </aside>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/call.js"></script>
+</body>
+</html>

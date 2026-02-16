@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LiveCall Lobby</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <main class="container lobby">
+    <section class="card">
+      <h1>LiveCall</h1>
+      <p>Secure WebRTC video calling for teams (up to 10 participants).</p>
+
+      <div id="auth-status" class="notice"></div>
+
+      <form id="auth-form" class="form-grid">
+        <input type="text" id="name" placeholder="Name (for register)" />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <div class="actions">
+          <button type="button" id="register-btn">Register</button>
+          <button type="submit">Login</button>
+        </div>
+      </form>
+
+      <hr />
+
+      <div class="form-grid">
+        <input type="text" id="room-id" placeholder="Room ID (leave empty to create one)" />
+        <div class="actions">
+          <button id="create-room-btn">Create Invite Link</button>
+          <button id="join-btn">Join Call</button>
+        </div>
+        <input type="text" id="invite-link" placeholder="Invite link appears here" readonly />
+      </div>
+
+      <h3>Call History</h3>
+      <ul id="history-list"></ul>
+    </section>
+  </main>
+  <script src="/js/lobby.js"></script>
+</body>
+</html>
